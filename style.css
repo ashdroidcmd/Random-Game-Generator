@@ -1,0 +1,17 @@
+body { font-family: Arial, sans-serif; }
+
+
+.game-container { 
+    gap: 20px; 
+}
+.game-card { 
+    width: 250px; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+.game-card img { 
+    width: 100%; 
+    border-radius: 8px; 
+}

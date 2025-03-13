@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-300">
+    <!-- Header Section -->
+    <header>
+        <a href="#"><h1 class="text-6xl font-bold text-center bg-black text-white p-5 mb-4">
+            Random Game Generator
+        </h1></a>
+    </header>
+
+
+    <!-- Generator Section -->
+    <section class="p-5 mb-4 rounded-xl w-full max-w-7xl mx-auto bg-white">
+        <h1 class="text-center font-bold text-4xl mb-5">Random Game Generator</h1>
+        <h2 class="text-center font-bold mb-5 max-w-5xl mx-auto">Random Game Generator: Click and find your next favorite game! It's easy and fun, with loads of games to discover. Perfect for any gamer ready for a surprise. Start your adventure now!</h2>
+        
+
+        <form> 
+            <div class="grid grid-cols-2 gap-1">
+                <div class="p-5">
+
+                
+                    <h2 class="text-center text-2xl mb-3">Genres</h2>
+                    <div class="grid grid-cols-4 gap-1">
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="4">
+                        <label for="vehicle1" class="">Action</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="3">
+                        <label for="vehicle2"> Adventure</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="11">
+                        <label for="vehicle3"> Arcade</label>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="28">
+                        <label for="vehicle1"> Board Games</label>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="17">
+                        <label for="vehicle1"> Card</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="40">
+                        <label for="vehicle2"> Casual</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="34">
+                        <label for="vehicle3"> Educational</label>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="19">
+                        <label for="vehicle1"> Family</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="6">
+                        <label for="vehicle2"> Fighting</label>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="51">
+                        <label for="vehicle2"> Indie</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="59">
+                        <label for="vehicle3"> MMO</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="83">
+                        <label for="vehicle3"> Platformer</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="7">
+                        <label for="vehicle3"> Puzzle</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="1">
+                        <label for="vehicle3"> Racing</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="5">
+                        <label for="vehicle3"> RPG</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="2">
+                        <label for="vehicle3"> Shooter</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="14">
+                        <label for="vehicle3"> Simulation</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="15">
+                        <label for="vehicle3"> Sports</label>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="10">
+                        <label for="vehicle3"> Strategy</label>
+
+                    </div>
+                </div>
+
+                <div class="p-5">
+                    <h2 class="text-center text-2xl mb-3">Platforms</h2>
+                    <div class="grid grid-cols-4 gap-1 mb-5">
+                        <input type="checkbox" id="PC" name="PC" value="4">
+                        <label for="PC" class="">PC</label>
+                        <input type="checkbox" id="NintendoSwitch" name="NintendoSwitch" value="7">
+                        <label for="Nintendo Switch">Nintendo Switch</label>
+                        <input type="checkbox" id="Playstation5" name="Playstation5" value="187">
+                        <label for="Playstation 5">Playstation 5</label>
+                        <input type="checkbox" id="Playstation4" name="Playstation4" value="18">
+                        <label for="Playstation 4">Playstation 4</label>
+                        <input type="checkbox" id="XboxOne" name="XboxOne" value="1">
+                        <label for="Xbox One">Xbox One</label>
+                        <input type="checkbox" id="XboxSeriesX/S" name="XboxSeriesX/S" value="186">
+                        <label for="Xbox Series X/S">Xbox Series X/S</label>
+                    </div>
+                    
+                    <h2 class="text-center text-2xl mb-3">Year Released</h2>
+                    <div class="flex flex-row justify-center">
+                        <label for="fname">From:</label><br>
+                        <input class="text-center" type="text" id="yearStart" value="2023">
+
+                        <label for="fname">To:</label><br>
+                        <input class="text-center" type="text" id="yearEnd" value="2024">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </form>
+        <div class="flex justify-center m-3">
+        <button type="button" onclick="fetchData()" class="text-2xl text-white font-bold bg-black hover:bg-gray-700 px-5 py-3 rounded-xl">Generate</button>
+        </div>
+  
+
+    </section>
+
+    <!-- Game Section -->
+    <section id="games" class="game-container text-center justify-center">
+        <h1 class="text-center">Random Game has not been Generated</h1>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="text-xl bg-white rounded-xl p-5 m-5 w-full max-w-7xl mx-auto text-justify shadow-2xl">
+        
+        <h3 class="font-bold">About Us?</h3>
+        <p class="mb-4">Welcome to Random Game Generator, where discovering your next game is as easy as a click! Whether you're bored, indecisive, or just looking for something new, our tool helps you find the perfect game based on your mood, genre preferences, or pure randomness.</p>
+
+        <p class="mb-4">We’re a team of passionate gamers and developers who know the struggle of scrolling endlessly through game libraries. That’s why we created this simple yet powerful solution to bring excitement back into game selection. From indie gems to AAA titles, our generator ensures that you never run out of gaming adventures.</p>
+            
+        <p class="mb-4">Try it out and let fate decide your next play!</p>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white p-5 text-center font-bold">
+        <p>&copy; 2025, Random Game Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html> 
